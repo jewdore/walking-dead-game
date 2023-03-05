@@ -1,0 +1,44 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9395958650601631" crossOrigin="anonymous"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?6f1e397acb233018c975e9ff15e04e65";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+			</script>
+			
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #fff;
+		color: #ffffff;
+	}
+	main {
+		max-width: 70ch;
+		margin: 0 auto;
+		padding: 2rem 2rem 4rem;
+	}
+</style>
